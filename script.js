@@ -10,6 +10,7 @@ let correctAnswer = false;
 let questionTally = 0;
 let questionPool = [];
 
+// Pool of questions that will be chosen
 let questions = [
     {
         question: 'Which beatboxer had a role in Men in Black II?',
@@ -58,6 +59,8 @@ let questions = [
 const correctPoint = 10;
 const totalQuestions = 5;
 
+// Default data when game begins
+
 startGame = () => {
     questionTally = 0;
     score = 0;
@@ -69,10 +72,13 @@ startGame = () => {
 
 };
 
+// How it cycles through the question pool
 newQuestion = () => {
     if(questionPool.length == 0 || questionTally >= totalQuestions){
-        return window.location.assign("/end.html");
+        localStorage.setItem('recentScore', score);
+        return window.location.assign("/highscores.html");
     }
+    // Increases question count with each question
     questionTally++;
     questionTallyBar.innerText = questionTally + "/" + totalQuestions;
    const questionTotal = Math.floor(Math.random() * questionPool.length);
@@ -121,13 +127,13 @@ choiceChoices.forEach(choice => {
 
     });
 });
-
+// Once a question is answered correctly, the score is increased by 10
 increaseScore = num => {
 score +=num;
 scoreBar.innerText = score;
 
 }
-
+// Timer
 var timeLeft = 30;
     var elem = document.getElementById('some_div');
     
