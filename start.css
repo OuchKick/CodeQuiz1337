@@ -1,0 +1,57 @@
+
+
+/* Styling for answer boxes */
+.choiceBox {
+display: flex;
+font-size: 1.2rem;
+margin-bottom: 5px;
+width: 100%;
+background-color: lightcoral;
+border-radius: 4px;
+
+}
+
+/* Animation for mouse hover over answers  */
+.choiceBox:hover {
+transform:rotate3d(100, 1, 1, 5turn);
+transition: transform 1s;
+}
+
+
+/* Correct & Incorrect Color Notifications */
+.correct {
+    background-color: lightseagreen;
+}
+
+.incorrect {
+    background-color: lightpink;
+}
+
+/* Styling for Letter choice of answer */
+.choice-Letter {
+    padding-top: 13px;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color:lightslategray;
+    color: white;
+    border-radius: 4px;
+}
+
+.choiceChoices {
+    padding: 1.3rem;
+    width: 100%;
+}
+
+
+
+/* Progress Bars */
+
+#ui {
+display: flex;
+justify-content: space-between;
+
+}
+
+
+
+
