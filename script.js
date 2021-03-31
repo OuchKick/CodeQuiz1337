@@ -76,7 +76,7 @@ startGame = () => {
 newQuestion = () => {
     if(questionPool.length == 0 || questionTally >= totalQuestions){
         localStorage.setItem('recentScore', score);
-        return window.location.assign("/highscores.html");
+        return window.location.assign("https://ouchkick.github.io/CodeQuiz1337/highscores.html");
     }
     // Increases question count with each question
     questionTally++;
@@ -142,7 +142,6 @@ var timeLeft = 30;
     function countdown() {
       if (timeLeft == -1) {
         clearTimeout(timerId);
-        alert('Times Up!');
         window.location = 'https://ouchkick.github.io/CodeQuiz1337/highscores.html';
       } else {
         elem.innerHTML = timeLeft + ' seconds remaining';
