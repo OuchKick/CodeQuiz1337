@@ -143,7 +143,7 @@ var timeLeft = 30;
       if (timeLeft == -1) {
         clearTimeout(timerId);
         alert('Times Up!');
-        window.location = '/highscores.html';
+        window.location = 'https://ouchkick.github.io/CodeQuiz1337/highscores.html';
       } else {
         elem.innerHTML = timeLeft + ' seconds remaining';
         timeLeft--;
